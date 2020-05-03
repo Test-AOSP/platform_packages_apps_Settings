@@ -81,4 +81,10 @@
         android:fragment="com.android.settings.gestures.GlobalActionsPanelSettings"
         settings:controller="com.android.settings.gestures.GlobalActionsPanelPreferenceController" />
 
+    <Preference
+        android:key="gesture_movement_based_lock_summary"
+        android:title="@string/movement_based_lock_title"
+        android:fragment="com.android.settings.gestures.MovementBasedLockSettings"
+        settings:controller="com.android.settings.gestures.MovementBasedLockPreferenceController" />
+
 </PreferenceScreen>

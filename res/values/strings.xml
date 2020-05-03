@@ -10372,6 +10372,16 @@
     <!-- Title for settings suggestion for fingerprint swipe for notifications [CHAR LIMIT=60] -->
     <string name="fingerprint_swipe_for_notifications_suggestion_title">See notifications quickly</string>
 
+    <!-- Title text for movement based lock [CHAR LIMIT=80]-->
+    <string name="movement_based_lock_title">Movement based lock</string>
+
+    <!-- Summary text for movement based lock (phone) [CHAR LIMIT=160]-->
+    <string name="movement_based_lock_summary" product="default">Lock your phone based on its movement.</string>
+    <!-- Summary text for movement based lock (tablet) [CHAR LIMIT=160]-->
+    <string name="movement_based_lock_summary" product="tablet">Lock your tablet based on its movement.</string>
+    <!-- Summary text for movement based lock (device) [CHAR LIMIT=160]-->
+    <string name="movement_based_lock_summary" product="device">Lock your device based on its movement.</string>
+
     <!-- Title text for the assist gesture [CHAR LIMIT=60] DO NOT TRANSLATE -->
     <string name="assist_gesture_title" translatable="false">Assist gesture</string>
 
