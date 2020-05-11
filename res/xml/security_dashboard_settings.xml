@@ -72,7 +72,7 @@
             android:entries="@array/scramble_pin_entries"
             android:entryValues="@array/scramble_pin_values" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="keyguard_camera"
             android:title="@string/keyguard_camera_title"
             android:summary="@string/keyguard_camera_summary"

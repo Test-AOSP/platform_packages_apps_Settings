@@ -10,10 +10,8 @@ import android.provider.Settings;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.TwoStatePreference;
-import androidx.preference.CheckBoxPreference;
+import androidx.preference.SwitchPreference;
 
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.core.PreferenceControllerMixin;
@@ -28,7 +26,7 @@ public class KeyguardCameraPreferenceController extends AbstractPreferenceContro
     private static final String PREF_KEY_SECURITY_CATEGORY = "security_category";
 
     private PreferenceCategory mSecurityCategory;
-    private CheckBoxPreference mKeyguardCamera;
+    private SwitchPreference mKeyguardCamera;
 
     public KeyguardCameraPreferenceController(Context context) {
         super(context);
@@ -56,7 +54,7 @@ public class KeyguardCameraPreferenceController extends AbstractPreferenceContro
         if (mSecurityCategory == null) {
             return;
         }
-        mKeyguardCamera = (CheckBoxPreference) mSecurityCategory.findPreference(PREF_KEY_KEYGUARD_CAMERA);
+        mKeyguardCamera = (SwitchPreference) mSecurityCategory.findPreference(PREF_KEY_KEYGUARD_CAMERA);
         mKeyguardCamera.setChecked(SystemProperties.getBoolean(SYS_KEY_KEYGUARD_CAMERA, true));
     }
 
