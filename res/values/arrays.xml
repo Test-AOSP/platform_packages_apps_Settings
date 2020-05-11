@@ -122,6 +122,52 @@
         <item>30 minutes</item>
     </string-array>
 
+    <!-- Do not translate. -->
+    <string-array name="lock_after_timeout_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>5000</item>
+        <!-- Do not translate. -->
+        <item>15000</item>
+        <!-- Do not translate. -->
+        <item>30000</item>
+        <!-- Do not translate. -->
+        <item>60000</item>
+        <!-- Do not translate. -->
+        <item>120000</item>
+        <!-- Do not translate. -->
+        <item>300000</item>
+        <!-- Do not translate. -->
+        <item>600000</item>
+        <!-- Do not translate. -->
+        <item>1800000</item>
+    </string-array>
+
+    <!-- Security settings.  The number of failed unlock attempts after which the device is wiped.
+         These are shown in a list dialog. -->
+    <string-array name="wipe_after_failed_attempts_entries">
+        <item>Disabled</item>
+        <item>5 attempts</item>
+        <item>10 attempts</item>
+        <item>15 attempts</item>
+        <item>20 attempts</item>
+    </string-array>
+
+    <!-- Do not translate. -->
+    <string-array name="wipe_after_failed_attempts_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>5</item>
+        <!-- Do not translate. -->
+        <item>10</item>
+        <!-- Do not translate. -->
+        <item>15</item>
+        <!-- Do not translate. -->
+        <item>20</item>
+    </string-array>
+
     <!-- Security Settings -->
     <string-array name="deny_new_usb_entries">
         <item>Deny new USB peripherals</item>
@@ -147,28 +193,6 @@
     <string-array name="scramble_pin_values" translatable="false">
         <item>true</item>
         <item>false</item>
-    </string-array>
-
-    <!-- Do not translate. -->
-    <string-array name="lock_after_timeout_values" translatable="false">
-        <!-- Do not translate. -->
-        <item>0</item>
-        <!-- Do not translate. -->
-        <item>5000</item>
-        <!-- Do not translate. -->
-        <item>15000</item>
-        <!-- Do not translate. -->
-        <item>30000</item>
-        <!-- Do not translate. -->
-        <item>60000</item>
-        <!-- Do not translate. -->
-        <item>120000</item>
-        <!-- Do not translate. -->
-        <item>300000</item>
-        <!-- Do not translate. -->
-        <item>600000</item>
-        <!-- Do not translate. -->
-        <item>1800000</item>
     </string-array>
 
     <string-array name="entries_font_size">
