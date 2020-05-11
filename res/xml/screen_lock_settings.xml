@@ -40,4 +40,12 @@
         android:key="power_button_instantly_locks"
         android:title="@string/lockpattern_settings_enable_power_button_instantly_locks" />
 
+    <!-- available in pin/pattern/password -->
+    <com.android.settings.RestrictedListPreference
+        android:key="wipe_after_failed_attempts"
+        android:title="@string/wipe_after_failed_attempts"
+        android:summary="@string/summary_placeholder"
+        android:entries="@array/wipe_after_failed_attempts_entries"
+        android:entryValues="@array/wipe_after_failed_attempts_values" />
+
 </PreferenceScreen>
