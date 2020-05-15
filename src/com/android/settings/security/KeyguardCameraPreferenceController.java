@@ -1,5 +1,6 @@
 package com.android.settings.security;
 
+import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 
 import android.os.UserHandle;
@@ -25,11 +26,16 @@ public class KeyguardCameraPreferenceController extends AbstractPreferenceContro
     private static final String PREF_KEY_KEYGUARD_CAMERA = "keyguard_camera";
     private static final String PREF_KEY_SECURITY_CATEGORY = "security_category";
 
+    private static final int MY_USER_ID = UserHandle.myUserId();
+
+    private final LockPatternUtils mLockPatternUtils;
+
     private PreferenceCategory mSecurityCategory;
     private SwitchPreference mKeyguardCamera;
 
     public KeyguardCameraPreferenceController(Context context) {
         super(context);
+        mLockPatternUtils = new LockPatternUtils(context);
     }
 
     @Override
@@ -41,7 +47,21 @@ public class KeyguardCameraPreferenceController extends AbstractPreferenceContro
 
     @Override
     public boolean isAvailable() {
-        return true;
+        if (!mLockPatternUtils.isSecure(MY_USER_ID)) {
+            return false;
+        }
+        switch (mLockPatternUtils.getKeyguardStoredPasswordQuality(MY_USER_ID)) {
+            case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
+            case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
+            case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX:
+            case DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC:
+            case DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC:
+            case DevicePolicyManager.PASSWORD_QUALITY_COMPLEX:
+            case DevicePolicyManager.PASSWORD_QUALITY_MANAGED:
+                return true;
+            default:
+                return false;
+        }
     }
 
     @Override
