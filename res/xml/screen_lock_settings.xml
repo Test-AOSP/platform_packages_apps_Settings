@@ -48,4 +48,11 @@
         android:entries="@array/wipe_after_failed_attempts_entries"
         android:entryValues="@array/wipe_after_failed_attempts_values" />
 
+    <!-- available in pin/pattern/password -->
+    <SwitchPreference
+        android:key="keyguard_camera"
+        android:title="@string/keyguard_camera_title"
+        android:summary="@string/keyguard_camera_summary"
+        android:persistent="false" />
+
 </PreferenceScreen>
